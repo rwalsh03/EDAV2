@@ -10,8 +10,13 @@ print(data)
 #Y Latitude: degrees north in increments of 2.5 (15 total) from 70N to 35N (includes most of US, Canada, Europe, Russia, part of China)
 #phi Geopotential height: 3d array organized by [lon,lat,t] so there are 54 million observations
 # This is the height (in meters) to reach a pressure of 500mb
-# Info about geopotential height
 #So we have 2,160 locations within a slice of the northern hemisphere with one pressure reading per day since 1948
+
+
+# Info about geopotential height:
+# https://climate.ncsu.edu/images/climate/enso/geo_heights.php
+# Panel 1 section: http://wxmaps.org/pix/fcstkey.html
+# More in-depth: http://www.nws.noaa.gov/ost/climate/STIP/37CDPW/37cdpw-dbarandiaran.pdf
 
 lon <- ncvar_get(data,"X")
 lat <- ncvar_get(data,"Y")
